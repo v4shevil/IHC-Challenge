@@ -12,3 +12,10 @@ document.querySelector("#Analisis")?.addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector("#AnalisisCard")?.scrollIntoView({ behavior: "smooth" });
 });
+
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle?.addEventListener("click", () => {
+    menu.classList.toggle("active");
+});
