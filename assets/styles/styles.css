@@ -200,12 +200,13 @@ footer {
     display: flex;
     align-items: center;
     gap: 2rem;
-    max-width: 90%;
+    width: 100%;
     background-color: #FFFFFF;
     padding: 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+    max-width: 1400px;
 }
 
 .card-img-horizontal {
