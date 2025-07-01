@@ -4,12 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const clone = template.content.cloneNode(true);
         document.body.appendChild(clone);
 
+
         const modalId = templateId.replace("Template", "Modal");
         const modal = document.getElementById(modalId);
         modal.style.display = "block";
-
-        if (templateId === "loginTemplate") handleLogin(modal);
-        if (templateId === "registerTemplate") handleRegister(modal);
 
         modal.querySelector(".close").addEventListener("click", () => {
             modal.remove();
@@ -38,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
     function enableSmoothScroll(triggerId, targetId) {
         document.querySelector(`#${triggerId}`)?.addEventListener("click", (e) => {
             e.preventDefault();
@@ -49,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
     enableSmoothScroll("Asistencia", "AsistenciaCard");
     enableSmoothScroll("Analisis", "AnalisisCard");
 
+    
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
     menuToggle?.addEventListener("click", () => {
