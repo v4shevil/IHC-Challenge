@@ -75,6 +75,31 @@
     <footer>
         <p>© 2025 Mindra. Todos los derechos reservados.</p>
     </footer>
-    <script src="assets/scripts/main.js"></script>
+
+<template id="loginTemplate">
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" id="closeLogin">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <input type="text" placeholder="Correo">
+            <input type="password" placeholder="Contraseña">
+            <button class="btn primary">Entrar</button>
+        </div>
+    </div>
+</template>
+
+<template id="registerTemplate">
+    <div class="modal" id="registerModal">
+        <div class="modal-content">
+            <span class="close" id="closeRegister">&times;</span>
+            <h2>Registrarse</h2>
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo">
+            <input type="password" placeholder="Contraseña">
+            <button class="btn primary">Registrarse</button>
+        </div>
+    </div>
+</template>
+<script src="assets/scripts/main.js"></script>
 </body>
 </html>
