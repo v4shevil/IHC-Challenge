@@ -1,12 +1,15 @@
-
 document.addEventListener("DOMContentLoaded", () => {
     function showModal(templateId) {
         const template = document.getElementById(templateId);
         const clone = template.content.cloneNode(true);
         document.body.appendChild(clone);
 
-        const modal = document.getElementById(templateId === 'loginTemplate' ? 'loginModal' : 'registerModal');
+        const modalId = templateId.replace("Template", "Modal");
+        const modal = document.getElementById(modalId);
         modal.style.display = "block";
+
+        if (templateId === "loginTemplate") handleLogin(modal);
+        if (templateId === "registerTemplate") handleRegister(modal);
 
         modal.querySelector(".close").addEventListener("click", () => {
             modal.remove();
@@ -20,17 +23,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    document.querySelectorAll('a[href="#login"], .btn.tertiary').forEach(btn => {
+
+    document.querySelectorAll('a[href="#login"], .btn.tertiary').forEach((btn) => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
-            showModal('loginTemplate');
+            showModal("loginTemplate");
         });
     });
 
-    document.querySelectorAll('a[href="#register"], .btn.secondary').forEach(btn => {
+    document.querySelectorAll('a[href="#register"], .btn.secondary').forEach((btn) => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
-            showModal('registerTemplate');
+            showModal("registerTemplate");
         });
     });
 
