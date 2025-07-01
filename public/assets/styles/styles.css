@@ -292,6 +292,11 @@ footer {
     max-width: 400px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .close {
@@ -308,9 +313,23 @@ footer {
 }
 
 .modal-content input {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ccc;
+}
+
+.modal-content button {
+    align-self: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #7C9D8E;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #688779;
 }
